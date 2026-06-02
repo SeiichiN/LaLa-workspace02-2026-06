@@ -17,8 +17,15 @@ public class Player {
 	}
 
 	public void look(String[][] map) {
-		System.out.print("現在位置 [" + this.y + ":" + this.x + "] ");
-		System.out.println(map[this.y][this.x]);
+		System.out.print("[" + this.y + ":" + this.x + "] ");
+		String msg = switch (map[this.y][this.x]) {
+		case "s" -> "スライムが現れた！";
+		case "g" -> "ゴブリンが現れた！";
+		case "e" -> "エーテルがあった！";
+		case "p" -> "ポーションを見つけた！";
+		default -> "何も見当たらない…";
+		};
+		System.out.println(msg);
 	}
 	
 

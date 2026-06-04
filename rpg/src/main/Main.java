@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -9,7 +11,8 @@ public class Main {
 			h.attack(g);
 			g.attack(h);
 			System.out.println
-			  ("ヒーロー:" + h.hp + " ゴブリン:" + g.hp);
+			  ("ヒーロー:" + h.hp + " ゴブリン:" + g.hp + "<Enter>");
+			String s = new Scanner(System.in).nextLine();
 		}
 	}
 

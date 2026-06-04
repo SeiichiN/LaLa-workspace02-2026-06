@@ -2,9 +2,7 @@ package main;
 
 import java.util.Random;
 
-public class Hero {
-	String name;
-	int hp;
+public class Hero extends Character {
 	
 	public Hero(String name) {
 		this.name = name;

@@ -2,19 +2,13 @@ package main;
 
 import java.util.Random;
 
-public class Hero {
-	String name;
-	int hp;
+public class Hero extends Character {
 	
 	public Hero(String name) {
-		this.name = name;
-		this.hp = 100;
+		super(name, 100);
 	}
 	
 	public void attack(Goblin g) {
-		if (this.hp <= 0) {
-			return;
-		}
 		System.out.println
 		  (this.name + "は" + g.name + "を攻撃した");
 		int damage = new Random().nextInt(30);

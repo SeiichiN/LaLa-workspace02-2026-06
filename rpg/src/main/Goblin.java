@@ -2,9 +2,8 @@ package main;
 
 import java.util.Random;
 
-public class Goblin {
+public class Goblin extends Character {
 	String name;
-	int hp;
 	
 	public Goblin() {
 		this.name = "ゴブリン"; 

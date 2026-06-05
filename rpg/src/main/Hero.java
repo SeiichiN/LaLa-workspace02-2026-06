@@ -5,8 +5,7 @@ import java.util.Random;
 public class Hero extends Character {
 	
 	public Hero(String name) {
-		this.name = name;
-		this.hp = 100;
+		super(name, 100);
 	}
 	
 	public void attack(Goblin g) {

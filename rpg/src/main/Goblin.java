@@ -3,11 +3,9 @@ package main;
 import java.util.Random;
 
 public class Goblin extends Character {
-	String name;
 	
 	public Goblin() {
-		this.name = "ゴブリン"; 
-		this.hp = 100;
+		super("ゴブリン", 100);
 	}
 
 	public void attack(Hero h) {

@@ -1,0 +1,14 @@
+package main;
+
+public class Ahiru extends SwimBird {
+	
+	public Ahiru(String name) {
+		super(name);
+	}
+
+	@Override
+	public void say() {
+		System.out.println(this.name + "はガアガアと鳴く");
+	}
+
+}

@@ -10,11 +10,11 @@ public class Goblin extends Monster {
 
 	public void attack(Human h) {
 		System.out.println
-		  (this.name + "は" + h.name + "を攻撃した");
+		  (this.getName() + "は" + h.getName() + "を攻撃した");
 		int damage = new Random().nextInt(30);
 		System.out.println
-		  (h.name + "に" + damage + "ポイントのダメージを与えた");
-		h.hp -= damage;
+		  (h.getName() + "に" + damage + "ポイントのダメージを与えた");
+		h.setHp(h.getHp() - damage); // h.hp - damage;
 	}
 	
 }

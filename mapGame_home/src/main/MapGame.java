@@ -8,7 +8,7 @@ public class MapGame {
 		for (int y = 0; y < 5; y++) {
 			System.out.print("|");
 			for (int x = 0; x < 5; x++) {
-				if (p.y == y && p.x == x) {
+				if (p.getY() == y && p.getX() == x) {
 					System.out.print("A");
 				} else {
 					System.out.print(map[y][x]);
@@ -28,9 +28,6 @@ public class MapGame {
 				{".", ".", "e", ".", "."},	
 		};
 		Player player = new Player();
-		Random rnd = new Random(123L);
-		player.y = rnd.nextInt(5);
-		player.x = rnd.nextInt(5);
 		printMap(player, map);
 		player.look(map);
 		
@@ -38,7 +35,10 @@ public class MapGame {
 			player.move();
 			printMap(player, map);
 			player.look(map);
-			
+			if (player.getHp() <= 0) {
+				System.out.println("ゲームオーバー");
+				break;
+			}
 		}
 
 	}

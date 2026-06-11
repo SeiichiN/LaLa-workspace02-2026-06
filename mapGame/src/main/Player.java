@@ -4,8 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Player {
-	int y;  // 縦
-	int x;  // 横
+	private int y;  // 縦
+	private int x;  // 横
 	
 	public Player() {
 		Random rnd = new Random();
